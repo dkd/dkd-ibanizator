@@ -1,4 +1,4 @@
-# dkd-ibanizator [![Build Status](https://travis-ci.org/dkd/dkd-ibanizator.svg?branch=master)](https://travis-ci.org/dkd/dkd-ibanizator)
+# dkd-ibanizator [![Build Status](https://travis-ci.org/dkd/dkd-ibanizator.svg?branch=master)](https://travis-ci.org/dkd/dkd-ibanizator) [![Gem Version](https://badge.fury.io/rb/dkd-ibanizator.svg)](https://badge.fury.io/rb/dkdeploy-core)
 
 dkd-ibanizator calculates the IBAN for German bank accounts. The database that is used to convert a bank number to a BIC is taken from [Deutsche Bundesbank](http://www.bundesbank.de/Redaktion/EN/Standardartikel/Tasks/Payment_systems/bank_sort_codes_download.html).
 
@@ -13,6 +13,12 @@ Add this line to your application's Gemfile:
 ## Usage
 
 ### Calculate IBAN
+
+Load dkd-ibanizator:
+
+```ruby
+    require 'ibanizator'
+```
 
 To calculate the IBAN for some German bank accounts, just use this method:
 

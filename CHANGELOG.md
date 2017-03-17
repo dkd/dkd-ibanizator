@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 This project will adhere to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.9.0] - 2017-03-17
 ### Added
 - new development dependencies: rubocop, rubocop-rspec, rake, bundle, guard-rspec, guard-rubocop
 
