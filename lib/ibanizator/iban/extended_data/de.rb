@@ -17,7 +17,7 @@ class Ibanizator
         memoize :bank_code
 
         def account_number
-          iban.to_s[12..-1].gsub(/\A0+/,"")
+          iban.to_s[12..-1].gsub(/\A0+/, '')
         end
         memoize :account_number
 

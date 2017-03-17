@@ -1,2 +1,2 @@
-class BankNotFoundError < Exception
+class BankNotFoundError < StandardError
 end

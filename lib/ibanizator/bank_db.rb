@@ -1,12 +1,13 @@
 class Ibanizator
   class BankDb
-    class BankNotFoundError < StandardError ; end
+    class BankNotFoundError < StandardError; end
 
     attr_reader :known_banks
 
     def initialize
       @known_banks = []
-      @bic_index, @bank_code_index = {}, {}
+      @bic_index = {}
+      @bank_code_index = {}
       populate_known_banks!
     end
 
@@ -23,8 +24,9 @@ class Ibanizator
     end
 
     private
-    def populate_known_banks!
-      File.open(File.expand_path("../../../db/blz.txt", __FILE__), 'r').each_line do |line|
+
+    def populate_known_banks! # rubocop:disable Metrics/AbcSize
+      File.open(File.expand_path('../../../db/blz.txt', __FILE__), 'r').each_line do |line|
         code, _, _, _, _, name, _, bic = line.unpack 'A8A1A58A5A35A27A5A11'
         next if bic.empty?
         name.force_encoding('iso-8859-1').encode!('utf-8')

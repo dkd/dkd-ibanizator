@@ -28,9 +28,7 @@ class Ibanizator
     memoize :country_code
 
     def extended_data
-      if country_code == :DE
-        ExtendedData::DE.new(self)
-      end
+      ExtendedData::DE.new(self) if country_code == :DE
     end
     memoize :extended_data
 
@@ -39,8 +37,9 @@ class Ibanizator
     end
 
     private
+
     def sanitize(input)
-      input.to_s.gsub(/\s+/,'').upcase
+      input.to_s.gsub(/\s+/, '').upcase
     end
   end
 end

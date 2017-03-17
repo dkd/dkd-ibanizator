@@ -1,2 +1,2 @@
-class InvalidBankCodeError < Exception
+class InvalidBankCodeError < StandardError
 end

@@ -1,20 +1,18 @@
 require 'spec_helper'
 
 describe Ibanizator::Iban::ExtendedData::DE do
-  let(:iban) { Ibanizator::Iban.new("DE68210501700012345678") }
-  let(:extended_data) { Ibanizator::Iban::ExtendedData::DE.new(iban) }
+  let(:iban) { Ibanizator::Iban.new('DE68210501700012345678') }
+  let(:extended_data) { described_class.new(iban) }
 
   describe('#initialize') do
     it 'takes an iban as argument' do
-      expect(Ibanizator::Iban::ExtendedData::DE.new(iban).iban).to eq(iban)
+      expect(described_class.new(iban).iban).to eq(iban)
     end
 
     it 'raises an Ibanizator::Iban::Invalid error if the given iban is not valid' do
-      iban = double('iban', valid?: false)
+      iban = instance_double('Ibanizator::Iban', valid?: false)
 
-      expect {
-        Ibanizator::Iban::ExtendedData::DE.new(iban)
-      }.to raise_error(Ibanizator::Iban::Invalid)
+      expect { described_class.new(iban) }.to raise_error(Ibanizator::Iban::Invalid)
     end
   end
 
@@ -37,14 +35,12 @@ describe Ibanizator::Iban::ExtendedData::DE do
   end
 
   it 'defines the equality base on the iban' do
-    extended_data2 = Ibanizator::Iban::ExtendedData::DE.new(iban)
+    extended_data2 = described_class.new(iban)
 
     expect(extended_data).to eq(extended_data2)
   end
 
   it 'makes the object immutable' do
-    expect {
-      Ibanizator::Iban::ExtendedData::DE.new(iban).instance_variable_set(:@iban, nil)
-    }.to raise_error
+    expect { described_class.new(iban).instance_variable_set(:@iban, nil) }.to raise_error
   end
 end

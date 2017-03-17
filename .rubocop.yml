@@ -1,0 +1,22 @@
+require: rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - Gemfile.lock
+    - vendor/**/*
+
+Metrics/BlockLength:
+  Max: 120
+LineLength:
+  Max: 120
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+RSpec/NestedGroups:
+  Max: 4
+RSpec/MessageSpies:
+  EnforcedStyle: receive
+Style/Alias:
+  Enabled: false

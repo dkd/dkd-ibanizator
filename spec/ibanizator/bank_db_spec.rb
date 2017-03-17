@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Ibanizator::BankDb do
-  let(:db) { Ibanizator::BankDb.new }
+  let(:db) { described_class.new }
   let(:bundesbank) { Ibanizator::Bank.new('MARKDEF1100', 'BBk Berlin', '10000000') }
 
   describe '#initialize' do
@@ -24,9 +24,7 @@ describe Ibanizator::BankDb do
     end
 
     it 'raises an BankNotFoundError if no bank could be found for the given bic' do
-      expect {
-        db.bank_by_bic('XXXXXXXXXXX')
-      }.to raise_error(Ibanizator::BankDb::BankNotFoundError)
+      expect { db.bank_by_bic('XXXXXXXXXXX') }.to raise_error(Ibanizator::BankDb::BankNotFoundError)
     end
   end
 
@@ -36,9 +34,7 @@ describe Ibanizator::BankDb do
     end
 
     it 'raises an BankNotFoundError if no bank could be found for the given bank code' do
-      expect {
-        db.bank_by_bank_code('000 000 00')
-      }.to raise_error(Ibanizator::BankDb::BankNotFoundError)
+      expect { db.bank_by_bank_code('000 000 00') }.to raise_error(Ibanizator::BankDb::BankNotFoundError)
     end
   end
 end

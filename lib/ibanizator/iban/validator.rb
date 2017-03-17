@@ -12,6 +12,7 @@ class Ibanizator
       end
 
       private
+
       def valid_length?
         return false if iban.length <= 4 # two digits for the country code and two for the checksum
         country_code = iban[0..1].upcase.to_sym

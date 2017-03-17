@@ -3,7 +3,6 @@
 # Require this file using `require "spec_helper"` to ensure that it is only
 # loaded once.
 #
-
 require 'ibanizator'
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration

@@ -1,26 +1,28 @@
 Gem::Specification.new do |s|
-  s.name = 'ibanizator'
-  s.version = '0.3.3'.freeze
-  s.date = '2015-02-14'
-  s.licenses    = ['MIT']
+  s.name = 'dkd-ibanizator'
+  s.version = '0.9.0'.freeze
+  s.date = '2017-03-17'
+  s.licenses = ['MIT']
 
-  s.summary = 'An IBAN generator/validator and BIC generator for german accounts.'
+  s.summary = 'An IBAN generator/validator and BIC generator for German bank accounts.'
   s.description = <<-EOD.gsub(/\s+/, ' ')
-    ibanizator generates the correct IBAN for given account number and bank number
-    for german accounts. It is possible to validate given international IBANS.
-    Calculates also the BIC and bank names for given german bank codes.
+    dkd-ibanizator generates the correct IBAN for a given account number and bank number
+    for German bank accounts. It is possible to validate given IBAN codes.
+    Calculates also the BIC and bank names for given German bank codes.
   EOD
-  s.homepage = 'https://github.com/softwareinmotion/ibanizator'
+  s.homepage = 'https://github.com/dkd/dkd-ibanizator'
 
-  s.authors = ["Christoph Stettner"]
-  s.email = 'christoph.stettner@softwareinmotion.de'
+  s.authors = ['Nicolai Reuschling']
+  s.email = 'nicolai.reuschling@dkd.de'
 
-  s.files = Dir.glob("lib/**/*") + %w(license.md README.md db/blz.txt)
+  s.files = Dir.glob('lib/**/*') + %w(license.md README.md db/blz.txt)
 
   s.add_dependency 'equalizer', '~> 0.0.11'
   s.add_dependency 'adamantium', '~> 0.2.0'
 
-  s.add_development_dependency 'rake', '~> 11.1.2'
-  s.add_development_dependency 'bundler', '~> 1.11.1'
-  s.add_development_dependency 'rspec', '~> 3.4'
+  s.add_development_dependency 'rake', '~> 12.0.0'
+  s.add_development_dependency 'bundler', '~> 1.14.6'
+  s.add_development_dependency 'rspec', '~> 3.5.0'
+  s.add_development_dependency 'rubocop', '~> 0.47.1'
+  s.add_development_dependency 'rubocop-rspec', '~> 1.13.0'
 end

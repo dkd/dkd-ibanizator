@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Ibanizator do
-  let(:ibanizator) { Ibanizator.new }
+  let(:ibanizator) { described_class.new }
 
   describe '#calculate_iban' do
     context 'given correct parameters' do
@@ -24,7 +24,7 @@ describe Ibanizator do
       end
 
       context 'given an account number with eight digits' do
-        before :each do
+        before do
           options[:account_number] = '12345678'
         end
 
@@ -90,8 +90,8 @@ describe Ibanizator do
   end
 
   describe '#bic' do
-    before :each do
-      allow(SwiftBic::BankDb).to receive(:new).and_return(double('a bank', :bic => 'MARKDEF1100'))
+    before do
+      allow(SwiftBic::BankDb).to receive(:new).and_return(instance_double('Bank', bic: 'MARKDEF1100'))
     end
 
     describe 'given valid german bank code' do
@@ -102,8 +102,8 @@ describe Ibanizator do
   end
 
   describe '#bank_name' do
-    before :each do
-      allow(SwiftBic::BankDb).to receive(:new).and_return(double('a bank', :bic => 'BBk Berlin'))
+    before do
+      allow(SwiftBic::BankDb).to receive(:new).and_return(instance_double('Bank', bic: 'BBk Berlin'))
     end
 
     describe 'given valid german bank code' do
@@ -123,19 +123,19 @@ describe Ibanizator do
 
   describe '.bank_db' do
     it 'returns a BankDB' do
-      expect(Ibanizator.bank_db).to be_a(Ibanizator::BankDb)
+      expect(described_class.bank_db).to be_a(Ibanizator::BankDb)
     end
   end
 
   describe '.iban_from_string(a_string)' do
     it 'returns an Ibanizator::Iban' do
-      expect(Ibanizator.iban_from_string('an_iban')).to be_a(Ibanizator::Iban)
+      expect(described_class.iban_from_string('an_iban')).to be_a(Ibanizator::Iban)
     end
 
     it 'delegates the object construction to Ibanizator::Iban.from_string' do
       expect(Ibanizator::Iban).to receive(:from_string).with('a_string')
 
-      Ibanizator.iban_from_string('a_string')
+      described_class.iban_from_string('a_string')
     end
   end
 end
