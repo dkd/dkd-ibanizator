@@ -1,28 +1,9 @@
+require_relative '../../lib/ibanizator'
 require_relative '../../lib/swift_bic/bank_db'
 require_relative '../../lib/errors/invalid_bank_code_error'
 
 describe SwiftBic::BankDb do
-  let(:bank_db) { described_class.new '10000000' }
-
-  describe '#initialize' do
-    context 'given there is no bank for the bank code' do
-      it 'raises a bank not found exception' do
-        expect { described_class.new '12345678' }.to raise_error(BankNotFoundError)
-      end
-    end
-  end
-
-  describe '#bank_name' do
-    it 'returns the bank name' do
-      expect(bank_db.bank_name).to eq('BBk Berlin')
-    end
-  end
-
-  describe '#bic' do
-    it 'returns the bic' do
-      expect(bank_db.bic).to eq('MARKDEF1100')
-    end
-  end
+  let(:bank_db) { described_class.new }
 
   describe '#validate_bank_code' do
     context 'given valid german bank code' do

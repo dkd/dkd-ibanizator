@@ -7,7 +7,7 @@ class Ibanizator
         include Adamantium
 
         def initialize(iban)
-          raise Invalid, "can't compute extended data on invalid iban" unless iban.valid?
+          raise Invalid, "Can't compute extended data on invalid IBAN!" unless iban.valid?
           @iban = iban
         end
 

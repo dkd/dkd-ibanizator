@@ -16,7 +16,7 @@ class Ibanizator
       def valid_length?
         return false if iban.length <= 4 # two digits for the country code and two for the checksum
         country_code = iban[0..1].upcase.to_sym
-        iban.length == LENGTHS[country_code]
+        iban.length == COUNTRY_CODES[country_code]
       end
 
       def valid_checksum?
@@ -29,9 +29,7 @@ class Ibanizator
       end
 
       def integerize(iban)
-        iban.gsub(/[A-Z]/) do |match|
-          match.ord - 'A'.ord + 10
-        end.to_i
+        iban.gsub(/[A-Z]/) { |match| match.ord - 'A'.ord + 10 }.to_i
       end
     end
   end # Iban

@@ -13,13 +13,13 @@ class Ibanizator
 
     def bank_by_bic(a_bic)
       @bic_index.fetch(a_bic.to_s) do
-        error! "No bank for bic: #{a_bic} found"
+        error! "No such bank for BIC `#{a_bic}` found!"
       end
     end
 
     def bank_by_bank_code(a_bank_code)
       @bank_code_index.fetch(sanitize_bank_code(a_bank_code)) do
-        error! "No bank for bank_code: #{a_bank_code} found"
+        error! "No bank for bank code `#{a_bank_code}` found!"
       end
     end
 

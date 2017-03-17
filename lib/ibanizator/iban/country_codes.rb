@@ -1,7 +1,7 @@
 class Ibanizator
   class Iban
     # according to wikipedia (http://en.wikipedia.org/wiki/IBAN)
-    LENGTHS = {
+    COUNTRY_CODES = {
       AL: 28,
       AD: 24,
       AT: 20,

@@ -2,7 +2,7 @@ require 'equalizer'
 require 'adamantium'
 
 require_relative 'iban/extended_data'
-require_relative 'iban/lengths'
+require_relative 'iban/country_codes'
 require_relative 'iban/validator'
 
 class Ibanizator
@@ -23,7 +23,7 @@ class Ibanizator
 
     def country_code
       cc = iban_string[0..1].to_sym
-      LENGTHS.keys.include?(cc) ? cc : :unknown
+      COUNTRY_CODES.keys.include?(cc) ? cc : :unknown
     end
     memoize :country_code
 

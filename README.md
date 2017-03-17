@@ -1,7 +1,6 @@
 # dkd-ibanizator [![Build Status](https://travis-ci.org/dkd/dkd-ibanizator.svg?branch=master)](https://travis-ci.org/dkd/dkd-ibanizator)
 
-dkd-ibanizator calculates the IBAN for German bank accounts. The database that is used to convert a bank number to a
-BIC is taken from [Deutsche Bundesbank](http://www.bundesbank.de/Redaktion/EN/Standardartikel/Tasks/Payment_systems/bank_sort_codes_download.html).
+dkd-ibanizator calculates the IBAN for German bank accounts. The database that is used to convert a bank number to a BIC is taken from [Deutsche Bundesbank](http://www.bundesbank.de/Redaktion/EN/Standardartikel/Tasks/Payment_systems/bank_sort_codes_download.html).
 
 ## Installation
 
@@ -28,7 +27,7 @@ Note: In the current version the dkd-ibanizator gem only works for German bank a
 
 To validate the IBAN you need to check the length and after this check the checksum. For details please refer to the documentation online (e.g. http://es.wikipedia.org/wiki/IBAN).
 
-This gem provides a simple validator for several contries. All countries that are listed in the Ibanizator::Iban::LENGTHS hash are supported at the moment.
+This gem provides a simple validator for several contries. All countries that are listed in the Ibanizator::Iban::COUNTRY_CODES hash are supported at the moment.
 
 ```ruby
     iban = Ibanizator.iban_from_string("DE68 2105 0170 0012 3456 78")
