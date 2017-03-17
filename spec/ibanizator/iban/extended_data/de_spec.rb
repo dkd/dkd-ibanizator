@@ -41,6 +41,6 @@ describe Ibanizator::Iban::ExtendedData::DE do
   end
 
   it 'makes the object immutable' do
-    expect { described_class.new(iban).instance_variable_set(:@iban, nil) }.to raise_error
+    expect { described_class.new(iban).instance_variable_set(:@iban, nil) }.to raise_error(RuntimeError, /can't modify frozen/)
   end
 end

@@ -69,6 +69,7 @@ describe Ibanizator::Iban do
   end
 
   it 'makes the iban immutable' do
-    expect { described_class.new(an_iban_string).iban_string.downcase! }.to raise_error
+    expect { described_class.new(an_iban_string).iban_string.downcase! }
+      .to raise_error(RuntimeError, /can't modify frozen/)
   end
 end

@@ -9,7 +9,7 @@ AllCops:
 Metrics/BlockLength:
   Max: 120
 LineLength:
-  Max: 120
+  Max: 140
 Style/Documentation:
   Enabled: false
 Style/FrozenStringLiteralComment:

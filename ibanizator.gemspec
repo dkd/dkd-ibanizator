@@ -27,4 +27,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop-rspec', '~> 1.13.0'
   s.add_development_dependency 'guard-rspec', '~> 4.7.3'
   s.add_development_dependency 'guard-rubocop', '~> 1.2.0'
+  s.add_development_dependency 'terminal-notifier', '~> 1.7.1'
+  s.add_development_dependency 'terminal-notifier-guard', '~> 1.7.0'
 end
