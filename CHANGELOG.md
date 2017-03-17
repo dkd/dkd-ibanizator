@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project will adhere to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Fixed
+- fixed and added links in README and CHANGELOG
+
 ## [0.9.0] - 2017-03-17
 ### Added
 - new development dependencies: rubocop, rubocop-rspec, rake, bundle, guard-rspec, guard-rubocop
@@ -24,3 +28,4 @@ This project will adhere to [Semantic Versioning](http://semver.org/).
 - previous release under the name of `ibanizator` ([code on Github](softwareinmotion/ibanizator)).  
 
 [Unreleased]: https://github.com/dkd/dkd-ibanizator/compare/master...develop
+[0.9.0]: https://github.com/dkd/dkd-ibanizator/releases/tag/v0.9.0
