@@ -5,15 +5,18 @@ This project will adhere to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
-- new development dependencies: rubocop, rubocop-rspec, rake, bundle
+- new development dependencies: rubocop, rubocop-rspec, rake, bundle, guard-rspec, guard-rubocop
 
 ### Changed
 - updated development dependencies: rake, bundler, rspec
 - latest db/blz.txt file from Deutsche Bundesbank (valid 2017-03-06 to 2017-06-04)
+- changed code to modern Ruby community coding style
 
 ### Fixed
 - improved spelling in README
-- changed code to modern Ruby community coding style
+
+## Removed
+- removed long deprecated validator class and methods
 
 ## [0.3.3] - 2015-02-14
 ### Summary
