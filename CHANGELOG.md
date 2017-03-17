@@ -15,7 +15,7 @@ This project will adhere to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - improved spelling in README
 
-## Removed
+### Removed
 - removed long deprecated validator class and methods
 
 ## [0.3.3] - 2015-02-14
