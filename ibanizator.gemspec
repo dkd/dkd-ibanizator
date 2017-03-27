@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake', '~> 12.0.0'
   s.add_development_dependency 'bundler', '~> 1.14.6'
   s.add_development_dependency 'rspec', '~> 3.5.0'
-  s.add_development_dependency 'rubocop', '~> 0.47.1'
+  s.add_development_dependency 'rubocop', '~> 0.48.0'
   s.add_development_dependency 'rubocop-rspec', '~> 1.13.0'
   s.add_development_dependency 'guard-rspec', '~> 4.7.3'
   s.add_development_dependency 'guard-rubocop', '~> 1.2.0'
