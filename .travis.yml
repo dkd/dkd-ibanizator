@@ -10,8 +10,8 @@ rvm:
   - 2.4.1
 
 before_install:
-  - gem install bundler --version 1.14.6 --no-document
+  - gem install bundler --no-document
 
 script:
-  - bundle exec rubocop
+  - bundle exec rubocop --display-cop-names --extra-details 
   - bundle exec rspec
