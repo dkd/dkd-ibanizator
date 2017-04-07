@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.authors = ['Nicolai Reuschling']
   s.email = 'nicolai.reuschling@dkd.de'
 
-  s.files = Dir.glob('lib/**/*') + %w(license.md README.md db/blz.txt)
+  s.files = Dir.glob('lib/**/*') + %w[license.md README.md db/blz.txt]
 
   s.add_dependency 'equalizer', '~> 0.0.11'
   s.add_dependency 'adamantium', '~> 0.2.0'
