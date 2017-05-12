@@ -6,6 +6,7 @@ This project will adhere to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Fixed
 - fixed and added links in README and CHANGELOG
+- latest db/blz.txt file from Deutsche Bundesbank (valid 2017-06-05 to 2017-09-03)
 
 ## [0.9.0] - 2017-03-17
 ### Added
