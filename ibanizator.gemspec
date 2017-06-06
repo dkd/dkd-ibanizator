@@ -23,11 +23,11 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake', '~> 12.0.0'
   s.add_development_dependency 'bundler', '~> 1.15.0'
   s.add_development_dependency 'rspec', '~> 3.6.0'
-  s.add_development_dependency 'rubocop', '~> 0.48.0'
+  s.add_development_dependency 'rubocop', '~> 0.49.1'
   s.add_development_dependency 'rubocop-rspec', '~> 1.15.0'
   s.add_development_dependency 'guard-rspec', '~> 4.7.3'
   s.add_development_dependency 'guard-rubocop', '~> 1.2.0'
-  s.add_development_dependency 'terminal-notifier', '~> 1.7.1'
+  s.add_development_dependency 'terminal-notifier', '~> 1.8.0'
   s.add_development_dependency 'terminal-notifier-guard', '~> 1.7.0'
   s.add_development_dependency 'coveralls', '~> 0.8.20'
 end
