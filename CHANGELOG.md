@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 This project will adhere to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+N/A
+
+## [0.10.0] - 2017-07-20
 ### Changed
 - latest db/blz.txt file from Deutsche Bundesbank (valid 2017-06-05 to 2017-09-03)
 - updated RSpec development dependency to v3.6.0
@@ -32,4 +36,6 @@ This project will adhere to [Semantic Versioning](http://semver.org/).
 - previous release under the name of `ibanizator` ([code on Github](softwareinmotion/ibanizator)).  
 
 [Unreleased]: https://github.com/dkd/dkd-ibanizator/compare/master...develop
+[0.10.0]: https://github.com/dkd/dkd-ibanizator/releases/tag/v0.10.0
 [0.9.0]: https://github.com/dkd/dkd-ibanizator/releases/tag/v0.9.0
+

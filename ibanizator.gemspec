@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'dkd-ibanizator'
-  s.version = '0.9.0'.freeze
+  s.version = '0.10.0'.freeze
   s.date = '2017-03-17'
   s.licenses = ['MIT']
 
@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop', '~> 0.49.1'
   s.add_development_dependency 'rubocop-rspec', '~> 1.15.0'
   s.add_development_dependency 'guard-rspec', '~> 4.7.3'
-  s.add_development_dependency 'guard-rubocop', '~> 1.2.0'
+  s.add_development_dependency 'guard-rubocop', '~> 1.3.0'
   s.add_development_dependency 'terminal-notifier', '~> 1.8.0'
   s.add_development_dependency 'terminal-notifier-guard', '~> 1.7.0'
   s.add_development_dependency 'coveralls', '~> 0.8.20'
