@@ -5,11 +5,11 @@ Gem::Specification.new do |s|
   s.licenses = ['MIT']
 
   s.summary = 'An IBAN generator/validator and BIC generator for German bank accounts.'
-  s.description = <<-EOD.gsub(/\s+/, ' ')
+  s.description = <<-DESC.gsub(/\s+/, ' ')
     dkd-ibanizator generates the correct IBAN for a given account number and bank number
     for German bank accounts. It is possible to validate given IBAN codes.
     Calculates also the BIC and bank names for given German bank codes.
-  EOD
+  DESC
   s.homepage = 'https://github.com/dkd/dkd-ibanizator'
 
   s.authors = ['Nicolai Reuschling']
@@ -20,11 +20,11 @@ Gem::Specification.new do |s|
   s.add_dependency 'equalizer', '~> 0.0.11'
   s.add_dependency 'adamantium', '~> 0.2.0'
 
-  s.add_development_dependency 'rake', '~> 12.0.0'
-  s.add_development_dependency 'bundler', '~> 1.15.0'
+  s.add_development_dependency 'rake', '~> 12.1'
+  s.add_development_dependency 'bundler', '~> 1.15.4'
   s.add_development_dependency 'rspec', '~> 3.6.0'
-  s.add_development_dependency 'rubocop', '~> 0.49.1'
-  s.add_development_dependency 'rubocop-rspec', '~> 1.15.0'
+  s.add_development_dependency 'rubocop', '~> 0.50.0'
+  s.add_development_dependency 'rubocop-rspec', '~> 1.17.0'
   s.add_development_dependency 'guard-rspec', '~> 4.7.3'
   s.add_development_dependency 'guard-rubocop', '~> 1.3.0'
   s.add_development_dependency 'terminal-notifier', '~> 1.8.0'
