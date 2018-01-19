@@ -26,6 +26,6 @@ class Ibanizator
         end
         memoize :bic
       end
-    end # ExtendedData
-  end # Iban
-end # Ibanizator
+    end
+  end
+end

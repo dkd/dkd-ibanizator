@@ -6,13 +6,13 @@ describe SwiftBic::BankDb do
   let(:bank_db) { described_class.new }
 
   describe '#validate_bank_code' do
-    context 'given valid german bank code' do
+    context 'when given valid german bank code' do
       it 'returns true' do
         expect(bank_db.validate_bank_code('10000000')).to eq(true)
       end
     end
 
-    context 'given invalid bank code' do
+    context 'when given invalid bank code' do
       it 'raises an invalid bank code exception' do
         expect { bank_db.validate_bank_code '123' }.to raise_error(InvalidBankCodeError)
       end

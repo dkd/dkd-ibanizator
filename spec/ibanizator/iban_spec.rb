@@ -22,7 +22,7 @@ describe Ibanizator::Iban do
   end
 
   describe '#extended_data' do
-    context 'given a german iban' do
+    context 'when given a german iban' do
       it 'returs an Instance of Ibanizator::Iban::ExendedData::DE' do
         expect(iban.extended_data).to be_a(Ibanizator::Iban::ExtendedData::DE)
       end

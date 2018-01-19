@@ -3,15 +3,15 @@ require 'spec_helper'
 describe Ibanizator do
   let(:ibanizator) { described_class.new }
 
-  describe '#calculate_iban' do
-    context 'given correct parameters' do
+  describe 'when using #calculate_iban' do
+    context 'when given correct parameters' do
       let(:options) { { country_code: :de, bank_code: '12345678', account_number: '123456789' } }
 
       it 'calculates the correct checksum' do
         expect(ibanizator.calculate_iban(options)[2..3]).to eq('58')
       end
 
-      context 'given parameters producing a one sign checksum' do
+      context 'when given parameters producing a one sign checksum' do
         let(:options) { { country_code: :de, bank_code: '10000000', account_number: '11111' } }
 
         it 'calculates the correct checksum and prepends zero' do
@@ -23,7 +23,7 @@ describe Ibanizator do
         expect(ibanizator.calculate_iban(options)).to eq('DE58123456780123456789')
       end
 
-      context 'given an account number with eight digits' do
+      context 'when given an account number with eight digits' do
         before do
           options[:account_number] = '12345678'
         end
@@ -34,7 +34,7 @@ describe Ibanizator do
       end
     end
 
-    context 'given bank code and account number with spaces' do
+    context 'when given bank code and account number with spaces' do
       let(:options) { { country_code: :de, bank_code: '123 456 78', account_number: '123 456 789' } }
 
       it 'strips spaces and still calculates the currect checksum' do
@@ -42,34 +42,34 @@ describe Ibanizator do
       end
     end
 
-    context 'given wrong bank code' do
+    context 'when given wrong bank code' do
       it 'throws an exception'
     end
 
-    context 'given to long account number' do
+    context 'when given to long account number' do
       it 'throws an exception'
     end
 
-    context 'given other country code than :de' do
+    context 'when given other country code than :de' do
       it 'throws an exception'
     end
   end
 
-  describe '#character_to_digit' do
-    context 'given :de as country code' do
+  describe 'when using #character_to_digit' do
+    context 'when given :de as country code' do
       it 'calculates 1314 as numeral country code' do
         expect(ibanizator.character_to_digit('de')).to eq('1314')
       end
     end
   end
 
-  describe '.bank_db' do
+  describe 'when using .bank_db' do
     it 'returns a BankDB' do
       expect(described_class.bank_db).to be_a(Ibanizator::BankDb)
     end
   end
 
-  describe '.iban_from_string(a_string)' do
+  describe 'when using .iban_from_string(a_string)' do
     it 'returns an Ibanizator::Iban' do
       expect(described_class.iban_from_string('an_iban')).to be_a(Ibanizator::Iban)
     end

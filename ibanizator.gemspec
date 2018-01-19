@@ -17,17 +17,16 @@ Gem::Specification.new do |s|
 
   s.files = Dir.glob('lib/**/*') + %w[license.md README.md db/blz.txt]
 
-  s.add_dependency 'equalizer', '~> 0.0.11'
   s.add_dependency 'adamantium', '~> 0.2.0'
+  s.add_dependency 'equalizer', '~> 0.0.11'
 
-  s.add_development_dependency 'rake', '~> 12.1'
-  s.add_development_dependency 'bundler', '~> 1.15.4'
-  s.add_development_dependency 'rspec', '~> 3.6.0'
-  s.add_development_dependency 'rubocop', '~> 0.50.0'
-  s.add_development_dependency 'rubocop-rspec', '~> 1.17.0'
+  s.add_development_dependency 'bundler', '~> 1.16.1'
+  s.add_development_dependency 'coveralls', '~> 0.8.20'
   s.add_development_dependency 'guard-rspec', '~> 4.7.3'
   s.add_development_dependency 'guard-rubocop', '~> 1.3.0'
+  s.add_development_dependency 'rake', '~> 12.1'
+  s.add_development_dependency 'rspec', '~> 3.7.0'
+  s.add_development_dependency 'rubocop-rspec', '~> 1.22.1'
   s.add_development_dependency 'terminal-notifier', '~> 1.8.0'
   s.add_development_dependency 'terminal-notifier-guard', '~> 1.7.0'
-  s.add_development_dependency 'coveralls', '~> 0.8.20'
 end

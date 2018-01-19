@@ -32,5 +32,5 @@ class Ibanizator
         iban.gsub(/[A-Z]/) { |match| match.ord - 'A'.ord + 10 }.to_i
       end
     end
-  end # Iban
-end # Ibanizator
+  end
+end

@@ -21,9 +21,7 @@ class Ibanizator
     options[:bank_code]      = options[:bank_code].to_s.gsub(/\s+/, '')
 
     # Fill account number to 10 digits
-    while options[:account_number].size < 10
-      options[:account_number] = options[:account_number].rjust(10, '0')
-    end
+    options[:account_number] = options[:account_number].rjust(10, '0') while options[:account_number].size < 10
 
     country_code_num = character_to_digit options[:country_code].to_s
     checksum = calculate_checksum options[:bank_code], options[:account_number], country_code_num

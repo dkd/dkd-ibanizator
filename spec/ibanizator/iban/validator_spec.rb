@@ -16,7 +16,7 @@ describe Ibanizator::Iban::Validator do
   end
 
   describe '#validate' do
-    context 'given the IBAN length does not match' do
+    context 'when given the IBAN length does not match' do
       it 'returns false (german example)' do
         expect(validator('DE68 2105 0170 0012 3456 7853').validate).to eq(false)
       end
@@ -30,8 +30,8 @@ describe Ibanizator::Iban::Validator do
       end
     end
 
-    context 'given the IBAN has the correct length' do
-      context 'given the IBAN is valid' do
+    context 'when given the IBAN has the correct length' do
+      context 'when given the IBAN is valid' do
         it 'returns true (german example)' do
           expect(validator('DE68 2105 0170 0012 3456 78').validate).to eq(true)
         end
@@ -45,7 +45,7 @@ describe Ibanizator::Iban::Validator do
         end
       end
 
-      context 'given the IBAN is invalid' do
+      context 'when given the IBAN is invalid' do
         it 'returns false (checksum is not correct)' do
           expect(validator('DE00 2105 0170 0012 3456 78').validate).to eq(false)
         end
