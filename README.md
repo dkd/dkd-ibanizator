@@ -1,4 +1,10 @@
-# dkd-ibanizator [![Build Status](https://travis-ci.org/dkd/dkd-ibanizator.svg?branch=master)](https://travis-ci.org/dkd/dkd-ibanizator) [![Gem Version](https://badge.fury.io/rb/dkd-ibanizator.svg)](https://badge.fury.io/rb/dkd-ibanizator) [![Coverage Status](https://coveralls.io/repos/github/dkd/dkd-ibanizator/badge.svg?branch=develop)](https://coveralls.io/github/dkd/dkd-ibanizator?branch=develop)
+# dkd-ibanizator [![Gem Version](https://badge.fury.io/rb/dkd-ibanizator.svg)](https://badge.fury.io/rb/dkd-ibanizator) [![Coverage Status](https://coveralls.io/repos/github/dkd/dkd-ibanizator/badge.svg?branch=develop)](https://coveralls.io/github/dkd/dkd-ibanizator?branch=develop)
+
+## Deprecation warning
+
+_This_ project repository will no longer be updated. You will find a fork of the original project [on GitHub maintained by zaknafain](https://github.com/zaknafain/ibanizator).
+
+## Summary
 
 dkd-ibanizator calculates the IBAN for German bank accounts. The database that is used to convert a bank number to a BIC is taken from [Deutsche Bundesbank](http://www.bundesbank.de/Redaktion/EN/Standardartikel/Tasks/Payment_systems/bank_sort_codes_download.html).
 
